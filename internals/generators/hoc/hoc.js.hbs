@@ -1,0 +1,42 @@
+/**
+ *
+ * {{ name }}
+ *
+ */
+
+import React, { useEffect } from 'react';
+// import PropTypes from 'prop-types';
+{{#if redux}}
+import { connect } from 'react-redux';
+{{/if}}
+
+export const {{ name }} = () => (WrappedComponent) => {
+  const HOC = (props) => {
+    useEffect(() => {
+      // Can be treated as mount/unmount hook, or update hook if observable is passed in 2nd argument.
+    }, []); // Add observable in array if you want the hook to run on updating those values
+
+    return <WrappedComponent {...props} />;
+  };
+
+  HOC.propTypes = {};
+
+  {{#if redux}}
+  // const mapStateToProps = (state) => ({
+  //   storeProp: state.reducer.storeProp,
+  // });
+
+  // const mapDispatchToProps = (dispatch) => ({
+  //   actionName: () => dispatch(actionName()),
+  // });
+
+  const withConnect = connect(
+    null, // mapStateToProps,
+    null, // mapDispatchToProps,
+  );
+
+  return withConnect(HOC);
+  {{else}}
+  return HOC;
+  {{/if}}
+};

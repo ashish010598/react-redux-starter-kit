@@ -1,0 +1,45 @@
+/**
+ *
+ * {{ name }} container
+ *
+ */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+
+import { defaultAction } from './state/{{ camelCase name }}.actions';
+import reducer from './state/{{ camelCase name }}.reducer';
+import saga from './state/{{ camelCase name }}.saga';
+import { injectReducer, injectSaga } from './{{ camelCase name }}.dependencies';
+
+export const {{ name }} = (props) => (
+  <div className="{{ lowerCase name }}-container">
+    <h1>{{ name }} Screen</h1>
+    <p>Default State: {props.defaultState}</p>
+    <button type="button" onClick={() => props.defaultAction('{{ name }}')}>
+      Change Default State To {{ name }}
+    </button>
+  </div>
+);
+
+{{ name }}.propTypes = {
+  defaultState: PropTypes.any,
+  defaultAction: PropTypes.func,
+};
+
+const mapStateToProps = (state) => ({
+  defaultState: state.{{ lowerCase name }}.defaultState,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  defaultAction: (payload) => dispatch(defaultAction(payload)),
+});
+
+const withReducer = injectReducer({ key: '{{ lowerCase name }}', reducer });
+const withSaga = injectSaga({ key: '{{ lowerCase name }}', saga });
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withReducer, withSaga, withConnect)({{ name }});

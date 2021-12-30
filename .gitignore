@@ -1,0 +1,19 @@
+# OSX
+.DS_Store
+
+# Editors
+.idea
+.vscode
+
+# node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Don't check auto-generated stuff into git
+coverage
+build/
+stats.json
+reports
+
+*/.keep

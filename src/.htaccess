@@ -1,0 +1,13 @@
+RewriteEngine On
+DirectoryIndex index.html
+Header set X-Frame-Options SAMEORIGIN
+ 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !index
+RewriteCond %{REQUEST_URI} !\.(?:css|js|map|jpe?g|gif|png)$ [NC]
+ 
+####################
+# GZIP COMPRESSION #
+####################
+SetOutputFilter DEFLATE

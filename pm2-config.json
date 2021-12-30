@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "pricing-doa",
+      "script": "app.js",
+      "instances": "max",
+      "exec_mode": "cluster",
+      "log": "./log/combined.log",
+      "merge_logs": true,
+      "watch": false
+    }
+  ]
+}

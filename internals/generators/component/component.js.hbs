@@ -1,0 +1,40 @@
+/**
+ *
+ * {{ name }}
+ *
+ */
+
+{{#if memo}}
+  {{#if hooks}}
+import React, { memo, useEffect } from 'react';
+  {{else}}
+import React, { memo } from 'react';
+  {{/if}}
+{{else}}
+  {{#if hooks}}
+import React, { useEffect } from 'react';
+  {{else}}
+import React from 'react';
+  {{/if}}
+{{/if}}
+// import PropTypes from 'prop-types';
+
+{{#if hooks}}
+export const {{ name }} = () => {
+  useEffect(() => {
+    // Can be treated as mount/unmount hook, or update hook if observable is passed in 2nd argument.
+  }, []); // Add observable in array if you want the hook to run on updating those values
+
+  return <div>{{ name }} Component</div>;
+};
+{{else}}
+export const {{ name }} = () => <div>{{ name }} Component</div>;
+{{/if}}
+
+{{ name }}.propTypes = {};
+
+{{#if memo}}
+export default memo({{ name }});
+{{else}}
+export default {{ name }};
+{{/if}}

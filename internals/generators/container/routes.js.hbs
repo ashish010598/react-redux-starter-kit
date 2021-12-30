@@ -1,0 +1,22 @@
+/**
+ *
+ * {{ name }} Routes
+ * Import the route file in app.routes to be processed by RoutesWrapper
+ *
+ */
+
+import { lazy } from 'react';
+
+const {{ name }} = lazy(() => import('.'));
+// Import child screen routes here
+
+export default [
+  {
+    exact: true,
+    path: '/{{ lowerCase name }}',
+    screen: {{ name }},
+    isPrivate: {{ isPrivate }},
+    sidebar: {{ displayInSidebar }},
+    name: '{{ name }}',
+  },
+];

@@ -1,0 +1,21 @@
+# OSX
+.DS_Store
+
+# Editors
+build/
+.idea
+.vscode
+
+# node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Don't check auto-generated stuff into git
+coverage
+stats.json
+reports
+
+# Legacy components
+src/app/components/legacy/
+src/app/screens/legacy/
