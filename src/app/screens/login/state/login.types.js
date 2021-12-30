@@ -5,6 +5,6 @@
  */
 
 export const ActionTypes = {
-  GET_DATA: 'trago/login/GET_DATA',
-  SAVE_DATA: 'trago/login/SAVE_DATA',
+  GET_DATA: 'rrstarterkit/login/GET_DATA',
+  SAVE_DATA: 'rrstarterkit/login/SAVE_DATA',
 };

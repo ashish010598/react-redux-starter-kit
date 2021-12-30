@@ -1,6 +1,6 @@
-# Trago WebApp
+# React-Redux Starter Kit (Generic)
 
-## Trago WebApp Repo environment setup
+## React-Redux Starter Kit Repo environment setup
 
 ### PROD build command
 

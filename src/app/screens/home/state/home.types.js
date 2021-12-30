@@ -5,5 +5,5 @@
  */
 
 export const ActionTypes = {
-  DEFAULT_ACTION: 'trago/home/DEFAULT_ACTION',
+  DEFAULT_ACTION: 'rrstarterkit/home/DEFAULT_ACTION',
 };

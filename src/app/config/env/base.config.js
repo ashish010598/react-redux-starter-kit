@@ -19,7 +19,7 @@ export default {
     },
   },
   API_MAX_RETRIES: 0,
-  APP_ID: 'Trago_Web_App',
+  APP_ID: 'React Redux Starter Kit',
   SENTRY_CONFIG: {
     DSN: 'https://sentryDsnForTheApp',
   },

@@ -1,5 +1,5 @@
 {
-  "name": "trago",
+  "name": "react-redux-starter-kit",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "build-test": "npm run build:clean-web && cross-env NODE_ENV=production API_ENV=qa SERVER_ENV=qa GENERATE_SOURCEMAP=false REACT_APP_ENV=QA webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build-prod-qa": "cross-env npm run merge:api-json && npm run build:clean-web && cross-env NODE_ENV=production GENERATE_SOURCEMAP=false SERVER_ENV=prod REACT_APP_ENV=PROD webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build-prod": "cross-env npm run merge:api-json && npm run build:clean-web && cross-env NODE_ENV=production SERVER_ENV=prod REACT_APP_ENV=PROD webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout && mkdir ./build/static",
-    "generate": "cross-env APP_SHORT_NAME=trago plop --plopfile internals/generators/index.js",
+    "generate": "cross-env APP_SHORT_NAME=rrstarterkit plop --plopfile internals/generators/index.js",
     "analyze:web": "npm run merge:api-json && npm run build:clean-web && cross-env NODE_ENV=production webpack --config internals/webpack/webpack.test.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "merge:api-json": "node internals/scripts/mergeApiJsons.js",
     "test:clean": "rimraf ./coverage",
