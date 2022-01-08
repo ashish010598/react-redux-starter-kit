@@ -55,7 +55,7 @@ export const REGEX = {
 
 export const META_TAGS = {
   DEFAULT: {
-    title: 'brand title',
+    title: 'React Redux Starter Kit',
   },
 };
 

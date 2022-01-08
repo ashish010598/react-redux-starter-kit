@@ -16,6 +16,4 @@ coverage
 stats.json
 reports
 
-# Legacy components
-src/app/components/legacy/
-src/app/screens/legacy/
+packages/**/dist/*

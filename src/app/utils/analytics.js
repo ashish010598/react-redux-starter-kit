@@ -27,6 +27,4 @@ export const recordTrackingEvent = (params = {}) => {
       eventsObj[prop] = params[paramPropMap[prop]];
     }
   });
-
-  ClickStream.trackEvent(eventsObj);
 };

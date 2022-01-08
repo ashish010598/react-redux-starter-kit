@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
   Switch,
-  HashRouter as Router,
+  BrowserRouter as Router,
   Redirect,
   Route,
 } from 'react-router-dom';

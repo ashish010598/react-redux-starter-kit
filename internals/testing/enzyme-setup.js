@@ -16,7 +16,3 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
-global.ClickStream = {
-  trackEvent: () => {},
-};

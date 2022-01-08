@@ -22,9 +22,6 @@ module.exports = {
       jsx: true,
     },
   },
-  globals: {
-    ClickStream: true,
-  },
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'arrow-body-style': [2, 'as-needed'],
