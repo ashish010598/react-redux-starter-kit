@@ -9,12 +9,11 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
+import _get from 'lodash/get';
 import { getDataFromAPI } from './state/login.actions';
 import reducer from './state/login.reducer';
 import saga from './state/login.saga';
 import { injectReducer, injectSaga } from './login.dependencies';
-
-import _get from 'lodash/get';
 
 export const Login = ({ getDataAction, data }) => {
   console.log('login screen');
