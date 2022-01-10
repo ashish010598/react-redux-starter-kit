@@ -85,7 +85,7 @@ This is done automatically via Webpack during hot-reload. If doing manually:
 
 ## Using Code Generators
 
-Code Generators available as part of the SDK can scaffold `components`, `screens` and `hoc` directories, files and boilerplate for them via command-line in a matter of few simple steps.
+Code Generators available as part of the repo can scaffold `components`, `screens` and `hoc` directories, files and boilerplate for them via command-line in a matter of few simple steps.
 
 To use, run the command `npm run generate` or `yarn generate` and follow the wizard asking you to provide name, path and other relevant details related to the structure you're creating.
 
@@ -107,8 +107,6 @@ To update snapshots: `npm test -- -u` or `yarn test -u`
 2. Request util (using Superagent)
 3. images util
 4. common utils
-
----
 
 ## Misc items included:
 
