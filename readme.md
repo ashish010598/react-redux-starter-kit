@@ -12,9 +12,12 @@ The primary goal of this project is to provide a stable foundation upon which to
 1. [Live Development](#local-development)
    - [Hot Reloading](#hot-reloading)
    - [Redux DevTools](#redux-devtools)
-1. [Testing](#testing)
-1. [Linting](#linting)
 1. [Building API JSON to feed Saga Helpers](#building-api-json-to-feed-saga-helpers)
+1. [Using Code Generators](#using-code-generators)
+1. [Linting](#linting)
+1. [Testing](#testing)
+1. [Available Utils included in the repo](#availbale-utils-included-in-the-repo)
+1. [Misc items included](#misc-items-included)
 
 ## Requirements
 
@@ -74,11 +77,17 @@ yarn add --dev redux-devtools redux-devtools-log-monitor redux-devtools-dock-mon
 
 Then follow the [manual integration walkthrough](https://github.com/gaearon/redux-devtools/blob/master/docs/Walkthrough.md).
 
-## Testing:
+## Building API JSON to feed Saga Helpers
 
-`npm test` or `yarn test` to run the test suites and generate coverage reports in `<ROOT_DIR>/coverage` directory.
+This is done automatically via Webpack during hot-reload. If doing manually:
 
-To update snapshots: `npm test -- -u` or `yarn test -u`
+`npm run merge:api-json` or `yarn merge:api-json` if to be merged standalone. Otherwise, this process is auto-executed at the start of webpack, web build and test commands.
+
+## Using Code Generators
+
+Code Generators available as part of the SDK can scaffold `components`, `screens` and `hoc` directories, files and boilerplate for them via command-line in a matter of few simple steps.
+
+To use, run the command `npm run generate` or `yarn generate` and follow the wizard asking you to provide name, path and other relevant details related to the structure you're creating.
 
 ## Linting:
 
@@ -86,8 +95,29 @@ To update snapshots: `npm test -- -u` or `yarn test -u`
 
 `npm run lint:fix` or `yarn lint:fix` to fix auto-fixable linting issues.
 
-## Building API JSON to feed Saga Helpers
+## Testing:
 
-This is done automatically via Webpack during hot-reload. If doing manually:
+`npm test` or `yarn test` to run the test suites and generate coverage reports in `<ROOT_DIR>/coverage` directory.
 
-`npm run merge:api-json` or `yarn merge:api-json` if to be merged standalone. Otherwise, this process is auto-executed at the start of webpack, web build and test commands.
+To update snapshots: `npm test -- -u` or `yarn test -u`
+
+## Available Utils icluded in the repo
+
+1. Redux utils (Reducers config & injectors, saga injectors, store config)
+2. Request util (using Superagent)
+3. images util
+4. common utils
+
+---
+
+## Misc items included:
+
+1. Components, Screens and HoC generator via CLI
+2. Webpack scripts for all environments (Base, Dev, Prod, Test)
+3. Express server scripts for dev/prod build execution on localhost
+4. Script to merge \*.api.json files into a single autoGenApiEndpoints.json file required by redux
+5. Common assets (fonts, images)
+6. Global theme files (global rules, colors, fonts, mixins etc)
+7. Global config setup
+8. Offline-Plugin lib
+9. Eslint, Babel and Jest config
